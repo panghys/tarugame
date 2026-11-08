@@ -20,6 +20,7 @@ public class EndTrigger : MonoBehaviour
 		{
 			GameManager.instance.timerRunning = false;
 			GameManager.instance.dangerText.SetActive(value: false);
+			GameManager.instance.dangerScreenFilter.gameObject.SetActive(false);
 			GameManager.instance.endTimer = 5f;
 		}
 	}

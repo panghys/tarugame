@@ -38,13 +38,13 @@ public class MouseController : MonoBehaviour
                 isOnCollisionCooldown = false;
             }
         }
-        if (isBeingHeld)
+        if (isBeingHeld && GameManager.instance.isRunning)
         {
             mousePos = Camera.main.ScreenToWorldPoint(Mouse.current.position.ReadValue());
             mousePos.x = Mathf.Clamp(mousePos.x, maxXizq, maxXder);
             gameObject.GetComponent<SpriteRenderer>().color = new Color(1f,1f,1f,5f); 
             transform.position = new Vector2(mousePos.x,transform.position.y);
-        if (Mouse.current.leftButton.wasPressedThisFrame && GameManager.instance.canBeClicked)
+        if (Pointer.current != null && Pointer.current.press.wasPressedThisFrame && GameManager.instance.canBeClicked)
         {
             pc.enabled = true;
             gameObject.GetComponent<SpriteRenderer>().color = new Color(1f,1f,1f,1f); 

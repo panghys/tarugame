@@ -12,6 +12,7 @@ TagManager:
   - badge
   - uni
   - pamela
+  - sophie
   layers:
   - Default
   - TransparentFX

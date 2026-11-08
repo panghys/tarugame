@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
@@ -26,7 +27,9 @@ public class GameManager : MonoBehaviour
 
     public GameObject dangerText;
     public TextMeshProUGUI dangerTimer;
-    public GameObject gameOverScreen;
+    public Canvas gameOverScreen;
+    public Canvas gameOverFilter;
+    public Canvas dangerScreenFilter;
 
     public bool isRunning = true;
     public bool timerRunning = false;
@@ -97,6 +100,7 @@ public class GameManager : MonoBehaviour
                 endTimer -= Time.deltaTime;
 
                 dangerText.SetActive(true);
+                dangerScreenFilter.gameObject.SetActive(true);
                 dangerTimer.text = endTimer.ToString("F1");
 
                 if (endTimer <= 0)
@@ -104,7 +108,8 @@ public class GameManager : MonoBehaviour
                     isRunning = false;
                     endTimer = 0;
                     dangerTimer.text = endTimer.ToString("F1");
-                    gameOverScreen.SetActive(true);
+                    gameOverScreen.gameObject.SetActive(true);
+                    gameOverFilter.gameObject.SetActive(true);
                 }
             }
         }
@@ -192,6 +197,12 @@ public class GameManager : MonoBehaviour
 
             case "pamela":
                 mc.rb.mass = 2.4f;
+                break;
+            case "sophie":
+                mc.rb.mass = 2.6f;
+                break;
+            case "gpuni":
+                mc.rb.mass = 3f;
                 break;
         }
     }
