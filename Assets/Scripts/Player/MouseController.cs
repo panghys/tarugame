@@ -14,7 +14,6 @@ public class MouseController : MonoBehaviour
     public bool isBeingHeld = true;
     public bool isOnCollisionCooldown = true;
 
-
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
