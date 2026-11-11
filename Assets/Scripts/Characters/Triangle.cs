@@ -6,6 +6,13 @@ public class Triangle : MouseController
     public bool yaColisiono = false;
     void OnCollisionEnter2D(Collision2D collision)
     {
+        MouseController mouse = collision.gameObject.GetComponent<MouseController>();
+        if (mouse != null)
+        {
+            mouse.canTrigger = true;
+            this.canTrigger = true;
+        }
+
         if(yaColisiono) return;
         if(collision.gameObject.tag == "triangle")
         {

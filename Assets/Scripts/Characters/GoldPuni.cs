@@ -4,10 +4,16 @@ public class GoldPuni : MouseController
 {
     [SerializeField] private int gpuniID = 9;
     public bool yaColisiono = false;
-    /* que se quede hasta aca
+    
     void OnCollisionEnter2D(Collision2D collision)
     {
-        
+        MouseController mouse = collision.gameObject.GetComponent<MouseController>();
+        if (mouse != null)
+        {
+            mouse.canTrigger = true;
+            this.canTrigger = true;
+        }
+        /*
         if(yaColisiono) return;
         if(collision.gameObject.tag == "gpuni")
         {
@@ -23,6 +29,6 @@ public class GoldPuni : MouseController
             yaColisiono = true;
 
         }
+            */
     }
-    */
 }

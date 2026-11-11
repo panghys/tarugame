@@ -29,8 +29,8 @@ Transform:
   m_GameObject: {fileID: 3463984993614214384}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 11.65, y: 2.72, z: 0}
-  m_LocalScale: {x: 0.3044475, y: 0.3025455, z: 1}
+  m_LocalPosition: {x: 11.1859, y: 3.4238, z: 0}
+  m_LocalScale: {x: 0.21236628, y: 0.2078029, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -526,5 +526,6 @@ MonoBehaviour:
   pc: {fileID: 0}
   isBeingHeld: 1
   isOnCollisionCooldown: 1
+  hasBeenPlayed: 0
   sophieID: 8
   yaColisiono: 0

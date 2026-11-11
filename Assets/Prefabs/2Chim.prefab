@@ -29,8 +29,8 @@ Transform:
   m_GameObject: {fileID: 5177068162403463366}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.5815, y: 4.2, z: 0}
-  m_LocalScale: {x: 0.27645916, y: 0.26483068, z: 1}
+  m_LocalPosition: {x: 3.4622, y: 4.4345, z: 0}
+  m_LocalScale: {x: 0.21825129, y: 0.20787613, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -136,10 +136,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Triangle
   mousePos: {x: 0, y: 0, z: 0}
   collisionCD: 0.1
+  triggerCD: 0.4
   rb: {fileID: 0}
   pc: {fileID: 0}
   isBeingHeld: 1
   isOnCollisionCooldown: 1
+  isOnTriggerCooldown: 0
+  canTrigger: 0
+  hasBeenPlayed: 0
   triangleID: 1
   yaColisiono: 0
 --- !u!60 &8462531503869947528
