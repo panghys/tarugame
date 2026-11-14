@@ -23,6 +23,7 @@ public class GameManager : MonoBehaviour
     public bool canBeClicked = true;
 
     public TextMeshProUGUI score;
+    public int finalScore;
     public TextMeshProUGUI bestSc;
 
     public GameObject dangerText;
@@ -106,6 +107,7 @@ public class GameManager : MonoBehaviour
                 if (endTimer <= 0)
                 {
                     isRunning = false;
+                    finalScore = totalScore;
                     endTimer = 0;
                     dangerTimer.text = endTimer.ToString("F1");
                     gameOverScreen.gameObject.SetActive(true);
@@ -117,10 +119,10 @@ public class GameManager : MonoBehaviour
         {
             int best = SaveManager.GetBestScore();
 
-            if (totalScore > best)
+            if (finalScore > best)
             {
                 SaveManager.ResetBestScore();
-                SaveManager.SaveBestScore(totalScore);
+                SaveManager.SaveBestScore(finalScore);
             }
         }
     }
@@ -158,6 +160,7 @@ public class GameManager : MonoBehaviour
     public void resetStats()
     {
         isRunning = true;
+        finalScore = 0;
         totalScore = 0;
     }
 

@@ -136,10 +136,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Square
   mousePos: {x: 0, y: 0, z: 0}
   collisionCD: 0.1
+  triggerCD: 10
   rb: {fileID: 0}
   pc: {fileID: 0}
   isBeingHeld: 1
   isOnCollisionCooldown: 1
+  isOnTriggerCooldown: 0
+  canTrigger: 1
   hasBeenPlayed: 0
   squareID: 2
   yaColisiono: 0
